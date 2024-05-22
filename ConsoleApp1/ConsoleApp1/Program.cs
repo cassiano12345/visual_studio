@@ -11,17 +11,6 @@ namespace ConsoleApp1
         enum cor { azul, verde, amerelo } //criar uma variavel com valores estaticos
         enum opcao { Criar=1, Deletar, Editar, Listar, Atualizar }
 
-        static void fore()
-        {
-            string[] palavras = { "Carro", "Avião", "Navio", "Comboio", "Submarino" };
-
-            foreach(string paralvra in palavras)
-            {
-                Console.WriteLine(paralvra);
-            }
-            Console.WriteLine("Fim da linha!!!");
-
-        }
 
         static void Main(string[] args)
         {
@@ -39,16 +28,25 @@ namespace ConsoleApp1
             //Console.ReadLine();
         }
 
+        static void fore()
+        {
+            string[] palavras = { "Carro", "Avião", "Navio", "Comboio", "Submarino" };
+
+            foreach (string paralvra in palavras)
+            {
+                Console.WriteLine(paralvra);
+            }
+            Console.WriteLine("Fim da linha!!!");
+
+        }
         static void teste_enum()
         {
             Console.WriteLine("Selecione uma opção");
             Console.WriteLine("1-Criar\n2-Deletar\n3-Editar\n4-Listar\n5-Atualizar");
             int index = int.Parse(Console.ReadLine());
             opcao opcaoselecionada = (opcao)index;
-
             Console.WriteLine(opcaoselecionada);
             Console.ReadLine();
-
         }
 
         static void Programa_Idade() {
@@ -141,7 +139,5 @@ namespace ConsoleApp1
                     break;
             }
         }
-
-        
     }
 }
